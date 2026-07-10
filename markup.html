@@ -4,53 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-            header {
-background-color: #183C63;
-color: #FFFFFF;
-text-align: center;
-max-width: 800px;
-margin: 0 auto;
-padding: 16px;
-            }
-img {
-width: 80px;
-height: 80px;
-}
-main{
-    display: flex;
-}
-.author{
-    font-weight: bold;
-}
-article {
-    display: flex;
-
-}
-.artigo-autor {
-    font-weight: bold;
-}
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function  (botao) {
-    let curtiu = false;
-    botao.addEventListener("click", botaoClicado);
-    function botaoClicado() {
-    console.log("fui clicado");
-    let texto = botao.querySelector("span");
-    if (curtiu === false) {
-    texto.textContent++;
-    curtiu = true;
-   } else {
-        texto.textContent--;
-         curtiu = false;
-    }
-   }
-}) 
-
+   
 </script>
 <body>
  <header>
@@ -84,7 +41,13 @@ alt="um passaro falndo">
 </div>
 </article>
 
-</main>
+<p>
+Primeira parte do texto sobre computaaoo.
+<br><br>
+Segunda parte do texto, que agora aparece em uma nova linha.
+</p>
 
+</main>
+<script src="main.js"></script>
 </body>
 </html>
