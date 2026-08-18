@@ -6,6 +6,8 @@ max-width: 800px;
 margin: 0 auto;
 padding: 16px;
             }
+body {
+  max-width: 100vw;
 img {
 width: 80px;
 height: 80px;
@@ -18,7 +20,9 @@ main{
 }
 article {
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 .artigo-autor {
     font-weight: bold;
