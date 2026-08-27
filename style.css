@@ -1,4 +1,4 @@
- root {
+ :root {
     --cor-principal: #183C63;
     --cor-secundaria: #3782d2;
     --cor-fundo: #ffffff;
@@ -8,6 +8,11 @@
 
     --fonte-texto: 'Segoe UI', sans-serif;
 }
+
+* {
+    transition: background-color 3.0s ease;
+}
+
 .tema-escuro { 
     --cor-principal: #A6CEFE; 
     --cor-secundaria: #98caff;
@@ -26,6 +31,9 @@
 .tema-escuro header p {
     color: var(--cor-contraste)
 }
+.tema-escuro btn-tema-escuro {
+    background-color: var(--cor-secundaria);
+}
  body {
     max-width: 100vw;
     font-family: var(--fonte-texto);
@@ -39,7 +47,7 @@ padding: 16px;
             }
 main {
     background-color: var(--cor-fundo);
-    color: var(--cor-secundaria);
+    color: var(--cor-principal);
     margin: 0 auto;
     padding: 16px;
     display: flex;
@@ -47,11 +55,15 @@ main {
 }
 article {
     display: flex;
+    /* x-offset | y-offset | blur-radius | color (com transparência) */
+    box-shadow: 0 2px 34px rgba(0, 0, 0, 0.3);
+
+
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid var(--cor-principal);
+    
     margin: 16px;
     gap: 16px;
     padding: 16px;
@@ -70,7 +82,7 @@ height: 80px;
     right: 16px;  /* Distância da borda da direita */
     font-size: 32px; /* Tamanho do emoji */
     padding: 12px;   /* Espaço interno entre o emoji e a borda */
-    background-color: var(--cor-primaria); /* Cor de fundo usando nossa variável */
+    background-color: var(--cor-principal); /* Cor de fundo usando nossa variável */
     border-radius: 50%; /* Deixa o botão perfeitamente redondo */
     border: none; /* Remove a borda padrão do botão */
     cursor: pointer; /* Muda o mouse para a "mãozinha" ao passar por cima */
